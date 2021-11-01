@@ -1,0 +1,21 @@
+.mobile-menu{
+    @apply h-screen bg-white fixed top-0 right-0 z-10 w-56
+        rounded-l-3xl pt-12 pb-4 transform transition duration-200 ease-in-out 
+        flex flex-col justify-between;
+}
+
+.mobile-menu-nav-items{
+    @apply flex flex-col;
+}
+
+.mobile-menu-nav-items *{
+    @apply py-10 px-8 font-montserrat text-purple;
+}
+
+.mobile-menu-socials {
+    @apply flex justify-around relative text-purple;
+}
+
+.mobile-menu-socials .facebook{
+    color: 	#4267B2;
+}

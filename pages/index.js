@@ -14,6 +14,7 @@ export const Home = ({config}) => {
   )
 }
 
+//Change this to get the homepage content instead
 export const getStaticProps = async () => {
   const res = await axios.get(`${process.env.BASE_URL}/api/config`);
   const config = res.data;

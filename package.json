@@ -8,11 +8,13 @@
   "dependencies": {
     "@prismicio/client": "^5.1.0",
     "axios": "^0.24.0",
+    "framer-motion": "^5.0.1",
     "next": "latest",
     "prismic-dom": "^2.2.6",
     "prismic-javascript": "^3.0.2",
     "react": "^17.0.2",
-    "react-dom": "^17.0.2"
+    "react-dom": "^17.0.2",
+    "react-icons": "^4.3.1"
   },
   "devDependencies": {
     "autoprefixer": "^10.2.6",

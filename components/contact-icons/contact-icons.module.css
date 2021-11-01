@@ -1,0 +1,7 @@
+.contact-icons {
+    @apply flex justify-around relative;
+}
+
+.contact-icons .facebook{
+    color: 	#4267B2;
+}
