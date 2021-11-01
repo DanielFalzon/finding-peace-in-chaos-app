@@ -1,8 +1,9 @@
-import React, {useState, useEffect} from "react";
-import { ConfigurationContext } from "../contexts/configuration.context";
+import React, {useState, useEffect, createContext} from "react";
 import axios from "axios";
 
-const ConfigurationProvider = ({children}) => {
+export const ConfigurationContext = createContext();
+
+export const ConfigurationProvider = ({children}) => {
     const [configuration, setConfiguration] = useState(null);
     const [loading, setLoading] = useState(true);
 
@@ -11,8 +12,8 @@ const ConfigurationProvider = ({children}) => {
         try{
             const res = await axios.get(`/api/config`);
             
-            setLoading(false);
             setConfiguration(res.data);
+            setLoading(false);
         }catch(err){
             console.log(err);
         }
@@ -28,5 +29,3 @@ const ConfigurationProvider = ({children}) => {
         </ConfigurationContext.Provider>
     )
 }
-
-export default ConfigurationProvider;

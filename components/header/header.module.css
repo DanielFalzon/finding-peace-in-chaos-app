@@ -1,0 +1,19 @@
+.header{
+    @apply w-screen fixed z-20 bg-purple;
+}
+
+.logo{
+    height: 50px;
+}
+
+.top-navbar{
+    @apply flex justify-between my-2 mx-4 text-white items-center h-12;
+}
+
+.top-navbar-item{
+    @apply inline-block text-center;
+}
+
+.mobile-menu-content-cover{
+    @apply bg-black w-screen h-screen fixed top-0 left-0 opacity-60 
+}

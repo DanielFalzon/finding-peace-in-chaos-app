@@ -1,10 +1,13 @@
 import '../styles/global.css';
-import ConfigurationProvider from '../providers/configuration.context';
+import {ConfigurationProvider} from '../providers/configuration.provider';
+import Layout from '../components/layout';
 
 function MyApp({ Component, pageProps }) {
   return (
     <ConfigurationProvider>
-      <Component {...pageProps} />
+      <Layout>
+        <Component {...pageProps} />
+      </Layout>
     </ConfigurationProvider>
   )
 }
