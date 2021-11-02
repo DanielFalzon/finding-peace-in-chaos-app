@@ -9,10 +9,6 @@ const Header = () => {
     const [mobileHidden, setMobileHidden] = useState(true);
     const {configuration, loading} = useContext(ConfigurationContext);
 
-    useEffect(() => {
-        console.log(loading, configuration);
-    }, [configuration]);
-    
     return (
         <>
         <div className={styles.header}>
@@ -28,7 +24,7 @@ const Header = () => {
             </div>
             <MobileMenu hidden={mobileHidden} />
             <div 
-                className={mobileHidden? styles['mobile-menu-content-cover'] + "hidden" : styles['mobile-menu-content-cover'] + "block"} 
+                className={mobileHidden? styles['mobile-menu-content-cover'] + " hidden" : styles['mobile-menu-content-cover'] + " block"} 
                 onClick={() => setMobileHidden(!mobileHidden)} 
             />
         </div>

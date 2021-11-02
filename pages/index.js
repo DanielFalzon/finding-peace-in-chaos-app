@@ -1,26 +1,30 @@
 
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import axios from 'axios';
+import TextCollapser from '../components/text-collapser/text-collapser.component';
 
-export const Home = ({config}) => {
+export const Home = ({homepageData}) => {
+  const [content, setContent] = useState(null);
+
   useEffect(() => {
-    console.log(config);
-  }, [])
+    setContent(homepageData.content);
+  }, [homepageData])
 
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen py-2">
-      <h1>Hello there.....general kenobi</h1>
+    <div className="container mx-auto">
+      <h1>{homepageData.title.text}</h1>
+      <TextCollapser content={content} />
     </div>
   )
 }
 
 //Change this to get the homepage content instead
 export const getStaticProps = async () => {
-  const res = await axios.get(`${process.env.BASE_URL}/api/config`);
-  const config = res.data;
+  const res = await axios.get(`${process.env.BASE_URL}/api/homepage`);
+  const homepageData = res.data;
 
   return {
-    props: {config}
+    props: {homepageData}
   }
 }
 
