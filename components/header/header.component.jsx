@@ -1,5 +1,5 @@
 import styles from './header.module.css';
-import React, { useContext, useEffect, useState } from "react";
+import React, { useContext, useState } from "react";
 import {ConfigurationContext} from "../../providers/configuration.provider";
 
 import { MenuToggle } from '../menu-toggle/menu-toggle.component';

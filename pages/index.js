@@ -2,6 +2,7 @@
 import { useEffect, useState } from 'react';
 import axios from 'axios';
 import TextCollapser from '../components/text-collapser/text-collapser.component';
+import Profile from '../components/profile/profile.component';
 
 export const Home = ({homepageData}) => {
   const [content, setContent] = useState(null);
@@ -14,6 +15,7 @@ export const Home = ({homepageData}) => {
     <div className="container mx-auto">
       <h1>{homepageData.title.text}</h1>
       <TextCollapser content={content} />
+      <Profile />
     </div>
   )
 }

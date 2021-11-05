@@ -1,0 +1,17 @@
+.feature-card-text{
+    @apply font-montserrat;
+    width: 85px;
+}
+
+.feature-card-text--main{
+    @apply text-sm text-purple font-bold;
+    line-height: 15px;
+}
+
+.feature-card-text--sub{
+    @apply text-tiny font-thin;
+}
+
+.feature-card-container{
+    @apply bg-white mx-1 p-2 text-center flex flex-col rounded-xl;
+}
