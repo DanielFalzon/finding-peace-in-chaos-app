@@ -9,7 +9,7 @@ const Profile = () => {
   
     useEffect(() => {
         console.log(configuration)
-    }, [])
+    }, [configuration])
     return (<>
         {loading?
             <div className={styles["profile-container animate-pulse"]} >
@@ -19,8 +19,8 @@ const Profile = () => {
             <div className={styles["profile-container"]} >
                 <img className={styles["image"]} src={configuration.profilePicture.image} alt="Profile" />
                 <div className={styles["feature-cards-container"]}>
-                    {configuration.featureCards.map(({id, ...otherProps}) => (
-                        <FeatureCard key={id} {...otherProps} />
+                    {configuration.featureCards.map(({...otherProps}, index) => (
+                        <FeatureCard key={index} {...otherProps} />
                     ))}
                 </div> 
             </div>

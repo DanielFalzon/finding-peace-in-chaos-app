@@ -3,6 +3,7 @@ import { useEffect, useState } from 'react';
 import axios from 'axios';
 import TextCollapser from '../components/text-collapser/text-collapser.component';
 import Profile from '../components/profile/profile.component';
+import ContactIcons from '../components/contact-icons/contact-icons.component';
 
 export const Home = ({homepageData}) => {
   const [content, setContent] = useState(null);
