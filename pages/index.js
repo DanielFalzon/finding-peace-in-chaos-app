@@ -1,15 +1,17 @@
 
 import { useEffect, useState } from 'react';
-import axios from 'axios';
+
 import TextCollapser from '../components/text-collapser/text-collapser.component';
 import Profile from '../components/profile/profile.component';
-import ContactIcons from '../components/contact-icons/contact-icons.component';
+import Button from '../components/button/button.component';
 
-export const Home = ({homepageData}) => {
+export const Home = ({homepageData, servicesData}) => {
   const [content, setContent] = useState(null);
+  const [services, setServices] = useState(null);
 
   useEffect(() => {
     setContent(homepageData.content);
+    console.log(servicesData);
   }, [homepageData])
 
   return (
@@ -17,17 +19,23 @@ export const Home = ({homepageData}) => {
       <h1>{homepageData.title.text}</h1>
       <TextCollapser content={content} />
       <Profile />
+      <Button text="Contact Me" />
     </div>
   )
 }
 
-//Change this to get the homepage content instead
 export const getStaticProps = async () => {
-  const res = await axios.get(`${process.env.BASE_URL}/api/homepage`);
-  const homepageData = res.data;
+
+  const [homepageData, servicesData] = await Promise.all([
+    fetch(`${process.env.BASE_URL}/api/homepage`).then(r => r.json()),
+    fetch(`${process.env.BASE_URL}/api/services`).then(r => r.json()),
+  ])
 
   return {
-    props: {homepageData}
+    props: {
+      homepageData,
+      servicesData
+    }
   }
 }
 

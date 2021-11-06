@@ -6,10 +6,7 @@ import FeatureCard from "../feature-card/feature-card.component";
 
 const Profile = () => {
     const {configuration, loading} = useContext(ConfigurationContext);
-  
-    useEffect(() => {
-        console.log(configuration)
-    }, [configuration])
+
     return (<>
         {loading?
             <div className={styles["profile-container animate-pulse"]} >

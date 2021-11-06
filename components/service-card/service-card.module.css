@@ -1,0 +1,18 @@
+.service-card{
+    @apply mb-10;
+}
+
+.service-card-container{
+    @apply flex flex-row justify-between content-center;
+}
+
+.service-card-image{
+    @apply rounded-full w-a max-h-28 mx-4;
+}
+
+.service-card-text{
+    @apply w-7/12;
+}
+
+
+

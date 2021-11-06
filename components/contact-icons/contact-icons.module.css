@@ -5,3 +5,9 @@
 .contact-icons .facebook{
     color: 	#4267B2;
 }
+
+.contact-icons__background *{
+    background-color: white;
+    padding: 5px;
+    border-radius: 10px;
+}

@@ -6,7 +6,8 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        'purple': '#764192'
+        'purple': '#6B3F9C',
+        'peach': '#FFF4EE'
       },
       fontFamily: {
         'montserrat': 'montserrat',
