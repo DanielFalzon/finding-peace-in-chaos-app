@@ -22,14 +22,14 @@ h1 {
 }
 
 h2 {
-  @apply font-montserrat text-xl text-white text-center mb-8 uppercase;
+  @apply font-montserrat text-2xl text-white text-center mb-8 uppercase;
 }
 
 h3 {
-  @apply px-4 font-montserrat text-lg text-white text-left mb-6;
+  @apply px-4 font-montserrat text-lg text-white text-left mb-6 font-bold;
 }
 
 
 p{
-  @apply px-4 text-white font-catamaran;
+  @apply px-4 text-white font-catamaran font-bold;
 }

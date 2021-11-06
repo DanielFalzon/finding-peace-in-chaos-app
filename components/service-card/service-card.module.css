@@ -1,18 +1,34 @@
-.service-card{
-    @apply mb-10;
-}
-
 .service-card-container{
-    @apply flex flex-row justify-between content-center;
+    @apply bg-black mx-auto mb-8 rounded-lg bg-opacity-40 relative p-2;
+    max-width: 350px;
 }
 
-.service-card-image{
-    @apply rounded-full w-a max-h-28 mx-4;
+.service-card-header{
+    @apply pt-4;
+}
+
+.service-card-image-container {
+    height: 137px;
+    width: 100%;
+    position: relative;
+  }
+
+.service-card-image-container .image {
+    width: auto;
+    height: 137px;
+    position: relative !important;
+    object-fit: contain;
 }
 
 .service-card-text{
-    @apply w-7/12;
+    @apply pt-6 pb-14;
 }
 
+.service-card-button{
+    @apply mx-auto w-auto flex justify-center items-center py-2 px-6 absolute cursor-pointer
+        bg-blue-500 bg-peach text-purple font-bold rounded-tl-lg rounded-br-lg
+        hover:bg-purple hover:text-peach transition-all;
 
-
+    right: 0px;
+    bottom: 0px;
+}

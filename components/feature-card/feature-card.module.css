@@ -9,7 +9,7 @@
 }
 
 .feature-card-text--sub{
-    @apply text-tiny font-thin;
+    @apply text-tiny font-light;
 }
 
 .feature-card-container{

@@ -1,5 +1,5 @@
 .button-container{
-    @apply w-full flex flex-row items-center cursor-pointer;
+    @apply w-full mb-12 flex flex-row items-center cursor-pointer;
 }
 
 .button{
