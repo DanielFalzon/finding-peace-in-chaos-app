@@ -1,6 +1,5 @@
 import React, {useState, useEffect, createContext} from "react";
 import axios from "axios";
-import { data } from "autoprefixer";
 
 export const ConfigurationContext = createContext();
 

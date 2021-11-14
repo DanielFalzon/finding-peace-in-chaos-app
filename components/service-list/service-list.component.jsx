@@ -1,5 +1,6 @@
 import React from "react";
 import ServiceCard from "../service-card/service-card.component";
+import Button from "../button/button.component";
 
 const ServiceList = ({services}) => (
     <>
@@ -7,6 +8,7 @@ const ServiceList = ({services}) => (
         {services.map((service, index) => (
             <ServiceCard key={index} {...service} />
         ))}
+        <Button text="More Services" />
     </>
 )
 

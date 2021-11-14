@@ -6,7 +6,7 @@ const Services = async (req, res) => {
 
    const services = resultData.map((item) => {
         return {
-            title: item.data.tite[0].text,
+            title: item.data.title[0].text,
             summary: item.data.summary[0].text,
             image: {
                 alt: item.data.image.alt,
