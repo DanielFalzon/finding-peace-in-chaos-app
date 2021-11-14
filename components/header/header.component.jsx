@@ -1,8 +1,9 @@
 import styles from './header.module.css';
 import React, { useContext, useState } from "react";
-import {ConfigurationContext} from "../../providers/configuration.provider";
+import Link from "next/link";
 import {BsFacebook} from "react-icons/bs";
 
+import {ConfigurationContext} from "../../providers/configuration.provider";
 import { MenuToggle } from '../menu-toggle/menu-toggle.component';
 import MobileMenu from "../mobile-menu/mobile-menu.component";
 import MenuItems from '../menu-items/menu-items.component';
@@ -18,7 +19,10 @@ const Header = () => {
                 <div className={styles['top-navbar-item', 'top-navbar-item-mob-spacer']}></div>
 
                 <div className={styles['top-navbar-item']}>
-                    { !loading ? <img alt="logo" height="100" className={styles.logo} src={configuration.logo.image} /> : <></> }
+                    { !loading ? 
+                        <Link href="/">
+                            <img alt="logo" height="100" className={styles.logo} src={configuration.logo.image} /> 
+                        </Link>: <></> }
                 </div>
 
                 <div className={styles['top-navbar-item', 'top-navbar-item-menu-items']}>
@@ -39,7 +43,7 @@ const Header = () => {
                 onClick={() => setMobileHidden(!mobileHidden)} 
             />
         </div>
-        <div className="h-24"></div>
+        <div className="h-24 md:h-16"></div>
         </>
     )
 }

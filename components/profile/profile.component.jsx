@@ -13,10 +13,14 @@ const Profile = () => {
     const {configuration, loading} = useContext(ConfigurationContext);
 
     return (<>
+            
         {loading?
-            <div className={styles["profile-container animate-pulse"]} >
-                <div className={styles["image bg-gray-300 rounded-full "]}></div>
-            </div> 
+            <div className={styles["profile-container-skeleton"]} >
+                <div className={styles["image-container"]}>
+                    <div className={styles["image-skeleton"]}>
+                    </div>
+                </div>
+            </div>  
             :
             <div className={styles["profile-container"]} >
                 <div className={styles["image-container"]}>

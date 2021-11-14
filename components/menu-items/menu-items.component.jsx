@@ -1,8 +1,9 @@
 import React from "react";
+import Link from "next/link";
 
 const MenuItems = () => (
     <>
-        <a href="http://localhost:3000#boop">services</a>
+        <Link href="/services"><a>services</a></Link>
         <a href="http://localhost:3000#boop">events</a>
         <a href="http://localhost:3000#boop">contact us</a>
     </>

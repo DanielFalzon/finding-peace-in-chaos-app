@@ -1,7 +1,7 @@
-import { getPrismicDocByType } from "../../lib/api";
+import { getFeaturedServices } from "../../lib/api";
 
-export const getServices = async (req, res) => {
-    const output = await getPrismicDocByType('service');
+const HomeServices = async (req, res) => {
+    const output = await getFeaturedServices();
     const resultData = output.results;
 
     const services = resultData.map((item) => {
@@ -17,4 +17,4 @@ export const getServices = async (req, res) => {
     res.status(200).json(services);
 }
 
-export default getServices;
+export default HomeServices;

@@ -18,11 +18,11 @@ code {
 }
 
 h1 {
-  @apply font-montserrat text-3xl text-white text-center mb-8 uppercase;
+  @apply font-montserrat text-3xl text-white text-center mb-8 uppercase md:my-14;
 }
 
 h2 {
-  @apply font-montserrat text-2xl text-white text-center mb-8 uppercase;
+  @apply font-montserrat text-2xl text-white text-center mb-8 uppercase md:my-14;
 }
 
 h3 {
@@ -31,5 +31,5 @@ h3 {
 
 
 p{
-  @apply px-4 text-white font-catamaran font-bold;
+  @apply px-4 text-white font-catamaran font-semibold;
 }

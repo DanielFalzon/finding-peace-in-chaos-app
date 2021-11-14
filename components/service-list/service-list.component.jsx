@@ -1,14 +1,17 @@
 import React from "react";
+import styles from "./service-list.module.css";
+
 import ServiceCard from "../service-card/service-card.component";
 import Button from "../button/button.component";
 
 const ServiceList = ({services}) => (
     <>
         <h2>Available Services</h2>
-        {services.map((service, index) => (
-            <ServiceCard key={index} {...service} />
-        ))}
-        <Button text="More Services" />
+        <div className={styles['service-list-container']}>
+            {services.map((service, index) => (
+                <ServiceCard key={index} {...service} />
+            ))}
+        </div>
     </>
 )
 
