@@ -1,9 +1,11 @@
 import styles from './header.module.css';
 import React, { useContext, useState } from "react";
 import {ConfigurationContext} from "../../providers/configuration.provider";
+import {BsFacebook} from "react-icons/bs";
 
 import { MenuToggle } from '../menu-toggle/menu-toggle.component';
 import MobileMenu from "../mobile-menu/mobile-menu.component";
+import MenuItems from '../menu-items/menu-items.component';
 
 const Header = () => {
     const [mobileHidden, setMobileHidden] = useState(true);
@@ -13,13 +15,22 @@ const Header = () => {
         <>
         <div className={styles.header}>
             <div className={styles['top-navbar']}>
-                <div className={styles['top-navbar-item']}></div>
+                <div className={styles['top-navbar-item', 'top-navbar-item-mob-spacer']}></div>
 
                 <div className={styles['top-navbar-item']}>
                     { !loading ? <img alt="logo" height="100" className={styles.logo} src={configuration.logo.image} /> : <></> }
                 </div>
-                <div className="z-20" onClick={() => setMobileHidden(!mobileHidden)}>
+
+                <div className={styles['top-navbar-item', 'top-navbar-item-menu-items']}>
+                    <MenuItems />
+                </div>
+
+                <div className={styles['mobile-menu-toggle']} onClick={() => setMobileHidden(!mobileHidden)}>
                     <MenuToggle isOpen={!mobileHidden} toggle={() => setMobileHidden(mobileHidden)} />
+                </div>
+
+                <div className={styles['mobile-menu-toggle', 'top-navbar-item-facebook']}>
+                    <BsFacebook size={26}/>
                 </div>
             </div>
             <MobileMenu hidden={mobileHidden} />

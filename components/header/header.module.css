@@ -1,5 +1,5 @@
 .header{
-    @apply w-screen fixed z-20 bg-purple;
+    @apply w-full fixed z-20 bg-purple;
 }
 
 .logo{
@@ -14,6 +14,26 @@
     @apply inline-block text-center;
 }
 
+.top-navbar-item-mob-spacer{
+    @apply md:hidden;
+}
+
+.top-navbar-item-menu-items{
+    @apply hidden md:block;
+}
+
+.top-navbar-item-menu-items *{
+    @apply px-10 font-montserrat cursor-pointer;
+}
+
+.top-navbar-item-facebook{
+    @apply hidden md:block cursor-pointer;
+}
+
 .mobile-menu-content-cover{
-    @apply bg-black w-screen h-screen fixed top-0 left-0 opacity-60 
+    @apply bg-black w-screen h-screen fixed top-0 left-0 opacity-60;
+}
+
+.mobile-menu-toggle{
+    @apply z-20 md:hidden;
 }
