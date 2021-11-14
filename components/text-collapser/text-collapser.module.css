@@ -1,0 +1,12 @@
+.container{
+    @apply mb-6 md:pl-16;
+}
+
+.desktop-text{
+    @apply hidden md:block;
+    max-width: 500px;
+}
+
+.mobile-text{
+    @apply md:hidden;
+}

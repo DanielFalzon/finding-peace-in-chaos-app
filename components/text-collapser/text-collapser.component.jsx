@@ -1,4 +1,5 @@
 import React, {useEffect, useState} from "react";
+import styles from './text-collapser.module.css';
 
 const TextCollapser = ({content}) => {
     const [paragraphs, setParagraphs] = useState(null);
@@ -9,14 +10,23 @@ const TextCollapser = ({content}) => {
     useEffect(() => {
         setParagraphs(content);
         if(content) setExcerpt(content[0])
+        console.log(paragraphs);
     }, [content])
 
     return(
-        <>
-            <p className="mb-6">
-            { excerpt ? excerpt.text : ''}
+        <div className={styles['container']}>
+            <p className={styles["mobile-text"]}>
+                { excerpt ? excerpt.text : ''}
             </p>
-        </>
+            <div className={styles["desktop-text"]}>
+                { paragraphs ? paragraphs.slice(0,2).map(({text}, index) => (
+                    <div key={index}>
+                        <p>{text}</p><br/>
+                    </div>
+                )): ""}
+            </div>
+            
+        </div>
     )
 }
 

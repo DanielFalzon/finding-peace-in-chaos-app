@@ -1,5 +1,5 @@
 .header{
-    @apply w-full fixed z-20 bg-purple;
+    @apply w-full fixed z-20 bg-purple md:px-4 lg:px-10 2xl:px-16;
 }
 
 .logo{
