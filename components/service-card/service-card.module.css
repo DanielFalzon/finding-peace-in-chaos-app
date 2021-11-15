@@ -1,6 +1,6 @@
 .service-card-container{
-    @apply bg-black mx-auto mb-10 rounded-lg bg-opacity-40 relative p-2;
-    max-width: 350px;
+    @apply bg-black mx-10 mb-10 rounded-lg bg-opacity-40 relative p-2;
+    max-width: 300px;
 }
 
 .service-card-header{
