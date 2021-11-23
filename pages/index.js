@@ -10,7 +10,7 @@ export const Home = ({homepageData, servicesData}) => {
       <IndexTop content={homepageData.content} />
 
       <ServiceList services={servicesData}/>
-      <Button text="More Services" link="/services"/>
+      <Button text="More Services" link="/service"/>
     </div>
   )
 }

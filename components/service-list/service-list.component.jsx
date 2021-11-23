@@ -2,7 +2,6 @@ import React from "react";
 import styles from "./service-list.module.css";
 
 import ServiceCard from "../service-card/service-card.component";
-import Button from "../button/button.component";
 
 const ServiceList = ({services}) => (
     <>

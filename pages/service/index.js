@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 
 import ServiceList from "../../components/service-list/service-list.component";
 
-export const Services = ({servicesData}) => {
+export const ServicesPage = ({servicesData}) => {
     return (
         <ServiceList services={servicesData}/>
     )
@@ -20,4 +20,4 @@ export const getStaticProps = async () => {
     }
   }
 
-export default Services;
+export default ServicesPage;

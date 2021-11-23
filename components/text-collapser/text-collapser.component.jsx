@@ -3,14 +3,13 @@ import styles from './text-collapser.module.css';
 
 const TextCollapser = ({content}) => {
     const [paragraphs, setParagraphs] = useState(null);
-    const [excerpt, setExcerpt] = useState(null)
+    const [excerpt, setExcerpt] = useState(null);
 
     //If on desktop, add a read more button and render the dditional paragraphs
 
     useEffect(() => {
         setParagraphs(content);
-        if(content) setExcerpt(content[0])
-        console.log(paragraphs);
+        if(content) setExcerpt(content[0]);
     }, [content])
 
     return(
