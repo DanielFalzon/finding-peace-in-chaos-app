@@ -5,7 +5,7 @@ const MenuItems = () => (
     <>
         <Link href="/service"><a>services</a></Link>
         <a href="http://localhost:3000#boop">events</a>
-        <a href="http://localhost:3000#boop">contact us</a>
+        <a href="/contact">contact us</a>
     </>
 )
 
