@@ -1,0 +1,44 @@
+.event-card-container{
+    @apply  mx-4 mb-10 relative p-2;
+    max-width: 400px;
+}
+
+.event-card-top-details{
+    @apply flex flex-row relative;
+}
+
+.date-time-container{
+    @apply text-sm bg-black text-white rounded py-2 font-montserrat flex flex-col text-center opacity-70;
+    min-width: 80px;
+}
+
+.location-container{
+    @apply text-white text-sm font-montserrat align-middle flex flex-row self-stretch items-center ;
+    border-top:    1px solid #fff;
+    border-bottom: 1px solid #fff;
+}
+
+.location-text{
+    @apply px-4;
+}
+
+.event-card-description{
+    @apply bg-black bg-opacity-50 mt-2 text-white p-4 relative pb-12 rounded-lg;
+}
+
+.event-duration{
+    @apply pb-6 pl-4 flex flex-row items-center;
+}
+
+.event-duration-text{
+    @apply pl-4;
+}
+
+.event-card-button{
+    @apply mx-auto w-auto flex justify-center items-center py-2 px-6 absolute cursor-pointer
+        bg-blue-500 bg-peach text-purple font-bold rounded-tl-lg rounded-br-lg
+        hover:bg-purple hover:text-peach transition-all;
+
+    right: 0px;
+    bottom: 0px;
+}

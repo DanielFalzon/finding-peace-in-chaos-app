@@ -3,7 +3,8 @@ import Link from "next/link";
 
 const MenuItems = () => (
     <>
-        <Link href="/service"><a>services</a></Link>
+        <a href="http://localhost:3000#boop">about us</a>
+        <Link href="/service">services</Link>
         <a href="http://localhost:3000#boop">events</a>
         <a href="/contact">contact us</a>
     </>
