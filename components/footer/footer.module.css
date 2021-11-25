@@ -1,0 +1,29 @@
+.footer-container{
+    @apply bg-peach;
+}
+
+.footer-top-content{
+    @apply flex flex-row justify-around px-2 py-4 border-b border-purple;
+}
+
+.footer-bottom-content{
+    @apply  px-4 py-4 text-gray-400 text-sm;
+}
+
+.footer-menu-items-container{
+    @apply grid grid-cols-2 text-purple;
+    width:180px;
+}
+
+.footer-icon{
+    display: block;
+    max-width:230px;
+    max-height:80px;
+    width: auto;
+    height: auto;
+}
+
+.footer-menu-items-container *{
+    @apply m-2 text-sm;
+}
+    

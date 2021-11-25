@@ -65,10 +65,8 @@ export const EventCard = ({dateTime, duration, eventDetails, locationUrl, locati
                     <div className={styles['event-card-button']} >
                         <span  className="mr-4">Book Now!</span>
                     </div>
-                    
                 </Link>
             </div>
-            
         </div>
     )
 }
