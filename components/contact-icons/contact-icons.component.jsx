@@ -2,7 +2,7 @@ import React, {useEffect, useState} from "react";
 import { FaEnvelope, FaFacebook, FaPhone } from "react-icons/fa";
 import styles from './contact-icons.module.css';
 
-const ContactIcons = ({color='purple', facebookColor='blue-600', size=38, widthClass='w-full', withBackground=false}) => { 
+const ContactIcons = ({color='purple', facebookColor='blue-600', size=38, widthClass='w-full', withBackground=false, col=false}) => { 
     
     const [containerClasses, setContainerClasses] = useState([]);
 
@@ -13,7 +13,9 @@ const ContactIcons = ({color='purple', facebookColor='blue-600', size=38, widthC
             'mx-auto'
         ]
 
-        if(withBackground) classes.push(styles['contact-icons__background']);
+        if(withBackground)classes.push(styles['contact-icons__background']);
+
+        if(col)classes.push(styles['contact-icons__col']);
 
         setContainerClasses(classes);
     }, [])

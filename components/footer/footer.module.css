@@ -3,7 +3,7 @@
 }
 
 .footer-top-content{
-    @apply flex flex-row justify-around px-2 py-4 border-b border-purple;
+    @apply flex flex-row justify-around px-2 py-4 border-b border-purple items-center;
 }
 
 .footer-bottom-content{
@@ -11,8 +11,7 @@
 }
 
 .footer-menu-items-container{
-    @apply grid grid-cols-2 text-purple;
-    width:180px;
+    @apply grid grid-cols-2 text-purple md:grid-cols-3;
 }
 
 .footer-icon{
@@ -26,4 +25,11 @@
 .footer-menu-items-container *{
     @apply m-2 text-sm;
 }
-    
+
+.footer-contact-icons{
+    @apply hidden md:block;
+}
+
+.footer-conctact-icons-row{
+    @apply flex flex-row justify-start mb-4 text-purple text-sm font-montserrat;
+}

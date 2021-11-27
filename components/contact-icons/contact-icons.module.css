@@ -11,3 +11,8 @@
     padding: 5px;
     border-radius: 10px;
 }
+
+.contact-icons__col{
+    @apply flex flex-col justify-between;
+    height: 80px;
+}
