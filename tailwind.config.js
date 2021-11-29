@@ -6,6 +6,9 @@ module.exports = {
   important: true,
   theme: {
     extend: {
+      transitionProperty: {
+        height: 'height'
+      },
       colors: {
         'purple': '#754295',
         'peach': '#FFF4EE'

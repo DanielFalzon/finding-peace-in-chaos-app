@@ -12,7 +12,7 @@
 }
 
 .service-intro-content{
-    @apply flex mb-8 align-middle items-center;
+    @apply flex flex-col mb-8 align-middle items-start justify-items-center content-center;
 }
 
 .service-main-content-container{

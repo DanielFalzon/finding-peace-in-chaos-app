@@ -4,7 +4,7 @@ import Image from "next/image";
 import { RichText } from "prismic-reactjs";
 
 import Button from "../button/button.component";
-import QuestionCollapser from "../question-collapser/question-collapser.component";
+import QuestionList from "../question-list/question-list.component";
 
 const imageLoader = ({src}) => {
     return src;
@@ -78,7 +78,7 @@ export const ServiceContent = ({cardImage, pageImage, introContent, contentTitle
             {questions.length > 0?
                 <>
                     <h2>Frequently Asked Questions</h2>
-                    <QuestionCollapser questions={questions} />
+                    <QuestionList questions={questions} />
                 </>
                 :
                 <></>
