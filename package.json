@@ -12,6 +12,7 @@
     "next": "latest",
     "prismic-dom": "^2.2.6",
     "prismic-javascript": "^3.0.2",
+    "prismic-reactjs": "^1.3.4",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-icons": "^4.3.1"

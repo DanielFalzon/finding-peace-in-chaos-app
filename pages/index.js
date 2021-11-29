@@ -1,5 +1,7 @@
 //https://nextjs.org/docs/basic-features/data-fetching
 //Incremental static page regeneration
+//https://prismic.io/docs/technologies/send-slices-prismic-nextjs
+//Dev environment for prismic data when site is on prod
 
 import React, { useEffect } from 'react';
 

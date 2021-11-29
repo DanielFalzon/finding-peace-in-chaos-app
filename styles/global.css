@@ -2,7 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
+html{
+  height: 100%;
+}
+
 body {
+  min-height: 100%;
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
@@ -29,7 +34,19 @@ h3 {
   @apply px-4 font-montserrat text-lg text-white text-left mb-6 font-bold;
 }
 
-
 p{
-  @apply px-4 text-white font-catamaran font-semibold;
+  @apply px-4 text-white font-catamaran font-semibold mb-2;
+}
+
+ul{
+  @apply px-4 text-white font-catamaran font-semibold list-disc;
+}
+
+li{
+  @apply ml-6 mb-2;
+}
+
+.block-img img{
+  @apply my-4;
+  border-radius: 20px;
 }

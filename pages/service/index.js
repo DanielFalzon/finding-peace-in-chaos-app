@@ -3,9 +3,14 @@ import React, { useEffect } from "react";
 import ServiceList from "../../components/service-list/service-list.component";
 
 export const ServicesPage = ({servicesData}) => {
-    return (
-        <ServiceList services={servicesData}/>
-    )
+  
+  useEffect(() => {
+    console.log(servicesData);
+  }, [])
+
+  return (
+      <ServiceList services={servicesData}/>
+  )
 }
 
 export const getStaticProps = async () => {

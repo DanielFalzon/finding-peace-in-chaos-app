@@ -1,5 +1,5 @@
 .footer-container{
-    @apply bg-peach;
+    @apply bg-peach bottom-0 w-full;
 }
 
 .footer-top-content{

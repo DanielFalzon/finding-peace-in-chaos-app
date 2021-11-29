@@ -1,0 +1,33 @@
+.image-container {
+    @apply mb-8;
+    height: 200px;
+    width: 100%;
+    position: relative;
+  }
+
+.image-container .image {
+    width: auto;
+    position: relative !important;
+    object-fit: contain;
+}
+
+.service-intro-content{
+    @apply flex mb-8 align-middle items-center;
+}
+
+.service-main-content-container{
+    @apply flex flex-col md:flex-row justify-between mb-8;
+    flex-basis: 0;
+}
+
+.service-top-container{
+    @apply flex flex-row justify-center flex-wrap;
+}
+
+.service-top-container>*{
+    @apply md:w-1/2
+}
+
+.service-main-content{
+    @apply md:w-1/2;
+}
