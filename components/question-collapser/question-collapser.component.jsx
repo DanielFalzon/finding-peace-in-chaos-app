@@ -1,19 +1,23 @@
-import React, {useState} from "react";
+import React from "react";
 import { RichText } from "prismic-reactjs";
+import Collapsible from "react-collapsible";
 import styles from './question-collapser.module.css';
 
 export const QuestionCollapser = ({question}) => { 
-
-    const [active, setActive] = useState(false);
-
     return(
         <div className={styles['question-container']}>
-            <div className={styles['question']} onClick={() => setActive(!active)}>
-                <h3>{question.question[0].text}</h3>
-            </div>
-            <div className={active? styles['answer'] : styles['answer', 'hidden']}>
-                <RichText render={question.answer} /><br />
-            </div>
+            <Collapsible 
+                trigger={question.question[0].text}
+                triggerTagName="h3" 
+                triggerClassName={styles['question']}
+                triggerOpenedClassName={styles['question']}
+                transitionTime={200}
+            >
+                <div className={styles['answer']}>   
+                    <RichText render={question.answer} /><br />
+                </div>
+                
+            </Collapsible>
         </div>
     )
 }

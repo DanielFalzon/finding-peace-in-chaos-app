@@ -4,9 +4,12 @@ import QuestionCollapser from "../question-collapser/question-collapser.componen
 
 export const QuestionList = ({questions}) => (
     <div className={styles['question-list-container']}>
-        {questions.map(item => {
+        {questions.map((item, index) => {
             return (
-                <QuestionCollapser question={item} />
+                <>
+                    <QuestionCollapser key={index} question={item}/>
+                    
+                </>
             )
         })}
     </div>

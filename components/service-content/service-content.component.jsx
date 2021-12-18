@@ -84,7 +84,7 @@ export const ServiceContent = ({cardImage, pageImage, introContent, contentTitle
                 <></>
 
             }
-            
+            <Button text="Book an Appointment" link="/contact" />
         </>
     )
 }
