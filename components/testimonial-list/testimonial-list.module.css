@@ -1,0 +1,16 @@
+.dot{
+    height: 15px;
+    width: 15px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    @apply opacity-30 mx-1;
+}
+
+.selected{
+    @apply opacity-100;
+}
+
+.dots-container{
+    @apply flex justify-center my-8;
+}

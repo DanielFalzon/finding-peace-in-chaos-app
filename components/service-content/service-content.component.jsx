@@ -5,12 +5,16 @@ import { RichText } from "prismic-reactjs";
 
 import Button from "../button/button.component";
 import QuestionList from "../question-list/question-list.component";
+import TestimonialList from "../testimonial-list/testimonial-list.component";
 
 const imageLoader = ({src}) => {
     return src;
 }
 
-export const ServiceContent = ({cardImage, pageImage, introContent, contentTitle, mainContent, questions}) => {
+export const ServiceContent = ({
+        cardImage, pageImage, introContent, contentTitle, 
+        mainContent, questions, testimonials
+    }) => {
     const [image, setImage] = useState(null);
     const [seperatedContent, setSeperatedContent] = useState(null);
 
@@ -79,12 +83,16 @@ export const ServiceContent = ({cardImage, pageImage, introContent, contentTitle
                 <>
                     <h2>Frequently Asked Questions</h2>
                     <QuestionList questions={questions} />
+                    <Button text="Book an Appointment" link="/contact" />
                 </>
                 :
                 <></>
-
             }
-            <Button text="Book an Appointment" link="/contact" />
+            {testimonials.length > 0 ?
+                <TestimonialList testimonials={testimonials} />
+                :
+                <></>
+            }
         </>
     )
 }

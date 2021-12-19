@@ -7,7 +7,8 @@ export const QuestionList = ({questions}) => (
         {questions.map((item, index) => {
             return (
                 <>
-                    <QuestionCollapser key={index} question={item}/>
+                    {"question_" + index}
+                    <QuestionCollapser key={"question_" + index} question={item}/>
                     
                 </>
             )

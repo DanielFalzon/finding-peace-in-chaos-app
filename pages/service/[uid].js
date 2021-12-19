@@ -18,6 +18,7 @@ export const ServicePage = ({ serviceData }) => {
                 contentTitle={serviceData.contentTitle}
                 mainContent={serviceData.pageContent}
                 questions={serviceData.questions}
+                testimonials={serviceData.testimonials}
             />
         </>
     )
