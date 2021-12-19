@@ -40,6 +40,7 @@ const TestimonialList = ({testimonials}) => {
 
     return(
         <>
+            <h2>Testimonials</h2>
             <div ref={refCallback} className="keen-slider">
                 {testimonials.map((testimonial, index) => {
                     return(

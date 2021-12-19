@@ -1,0 +1,15 @@
+.testimonial-container{
+    @apply mx-2;
+}
+
+.top-container{
+    @apply flex justify-between mb-8 text-white;
+}
+
+.client-initials{
+    @apply font-montserrat text-lg;
+}
+
+.star-container{
+    @apply flex flex-row;
+}
