@@ -61,7 +61,7 @@ export const EventCard = ({dateTime, duration, eventDetails, locationUrl, locati
                 <h3>{title}</h3>
                 <p>{eventDetails}</p>
 
-                <Link href="/contact" >
+                <Link href="https://www.facebook.com/findingmypeaceinchaos" >
                     <div className={styles['event-card-button']} >
                         <span  className="mr-4">Book Now!</span>
                     </div>

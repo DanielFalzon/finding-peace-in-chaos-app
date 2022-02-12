@@ -67,7 +67,7 @@ export const ServiceContent = ({
                 </div>
                 
             </div>
-            <Button text="Book an Appointment" link="/contact" />
+            <Button text="Book an Appointment" link="https://www.facebook.com/findingmypeaceinchaos" />
             {contentTitle[0]? 
                 <h2>{contentTitle[0].text}</h2> : <span></span>
             }
@@ -83,7 +83,7 @@ export const ServiceContent = ({
                 <>
                     <h2>Frequently Asked Questions</h2>
                     <QuestionList questions={questions} />
-                    <Button text="Book an Appointment" link="/contact" />
+                    <Button text="Book an Appointment" link="https://www.facebook.com/findingmypeaceinchaos" />
                 </>
                 :
                 <></>
