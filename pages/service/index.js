@@ -2,6 +2,9 @@ import React, { useEffect } from "react";
 
 import ServiceList from "../../components/service-list/service-list.component";
 
+import { getPrismicDocByType } from "../../lib/api";
+import { getServiceModel } from "../../lib/models";
+
 export const ServicesPage = ({servicesData}) => {
   
   useEffect(() => {
@@ -14,15 +17,26 @@ export const ServicesPage = ({servicesData}) => {
 }
 
 export const getStaticProps = async () => {
+  
+  const getServices = async () => {
 
-    const servicesRes = await fetch(`${process.env.BASE_URL}/api/services`);
-    const servicesData = await servicesRes.json();
+    const output = await getPrismicDocByType('service');
+    const resultData = output.results;
 
-    return {
-      props: {
-        servicesData
-      }
+    const services = resultData.map((item) => { 
+        return getServiceModel(item);
+    })
+    
+    return services;
+  }
+
+  const servicesData = await getServices();
+
+  return {
+    props: {
+      servicesData
     }
   }
+}
 
 export default ServicesPage;

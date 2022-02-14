@@ -4,7 +4,7 @@ import styles from "./event-list.module.css";
 
 export const EventList = ({events}) => (
     <>
-        <h2>Upcoming Events</h2>
+        <h2 id="events">Upcoming Events</h2>
         <div className={styles['event-list-container']}>
             {events.map((event, index) => (
                 <EventCard key={index} {...event} />

@@ -11,11 +11,10 @@ const IndexTop = ({content}) => (
         <TextCollapser className={styles['text-collapser-container']} content={content} />
         <div>
             <Profile />
-
         </div>
         
     </div>
-    <Button text="Contact Me" />
+    <Button text="Contact Me" link="https://www.facebook.com/findingmypeaceinchaos"/>
     </>
 )
 
