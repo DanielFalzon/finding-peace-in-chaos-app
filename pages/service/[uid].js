@@ -39,7 +39,8 @@ export const getStaticProps = async ({params}) => {
     return{
         props: {
             serviceData
-        }
+        },
+        revalidate: 60
     }
 }
 

@@ -88,7 +88,8 @@ export const getStaticProps = async () => {
       homepageData,
       servicesData,
       eventsData
-    }
+    },
+    revalidate: 60
   }
 }
 
